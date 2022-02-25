@@ -10,7 +10,6 @@ def create_invoices():
             starkbank.Invoice(
                 amount=randint(1, 5000),
                 name=random_names(),
-                fine=randint(2, 10),
                 tax_id=random_cpf()
             )
         ])
