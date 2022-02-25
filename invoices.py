@@ -5,7 +5,7 @@ from cpf import random_cpf
 from random import randint
 
 def create_invoices():
-    for i in range(randint(8, 12)):         
+    for i in range(randint(8, 12)):     #create between 8 to 12 invoices
         invoices = starkbank.invoice.create([
             starkbank.Invoice(
                 amount=randint(1, 5000),
