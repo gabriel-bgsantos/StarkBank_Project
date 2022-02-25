@@ -5,12 +5,15 @@ import webhook
 import time
 
 def main():
-    while(True):
+    timing = 8 #24 hours because at each loop 1 is out until it reaches 0, then it stops
+    while timing != 0:
         keys.authenticator()
         invoices.create_invoices()
         webhook.url_webhooks()
         webhook.webhooks()
-        time.sleep(10800) #it runs every 3 hours
+        time.sleep(10800)   #each loop runs only every 3 hours
+        timing -= 1 #one is out at each loop, so the loops don't run forever
+
 
 if __name__ == '__main__':
         main()
