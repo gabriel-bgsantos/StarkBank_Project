@@ -11,7 +11,7 @@ def url_webhooks():
     )
 
 def webhooks():         #transfers the right amount to everyone with the "credited" status
-     events = starkbank.event.query(after=datetime.now())
+    events = starkbank.event.query(after=datetime.now())
     for event in events:
             if event.log.type == "credited": 
                 transference.get_that_money(event.log.invoice.amount) 
