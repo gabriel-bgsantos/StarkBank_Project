@@ -15,7 +15,7 @@ def get_that_money(amount):
     ])
 
     for transfer in transfers:        
-            if "created" in transfer.status:
-                print("The transfer was completed!\n", transfer)
-            else:
-                print ("There was an error, the transfer couldn't be completed...")
+        if "created" in transfer.status:
+            print("The transfer was completed!\n", transfer)
+        else:
+            print ("There was an error, the transfer couldn't be completed...")
