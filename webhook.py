@@ -16,10 +16,10 @@ def webhooks():
     credited_invoices_list = list()
     
     for event in events:
-        if "credited" in event.log.type:    #verifies if it is a duplicated id
+        if "credited" in event.log.type:    
             invoice_id = event.log.invoice.id
             
-            if invoice_id not in credited_invoices_list:    #if this id isn't on the list, transfer the amount and add the id on the list
+            if invoice_id not in credited_invoices_list:    #verifies if it is a duplicated id, if not, transfer the amount and add it to the list
                 transfer.transfering(event.log.invoice.amount)
                 credited_invoices_list.append(invoice_id)
             else:
