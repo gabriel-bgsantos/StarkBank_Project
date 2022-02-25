@@ -1,7 +1,7 @@
 import starkbank
 import keys
 
-def transfering(amount):
+def get_that_money(amount):
     transfers = starkbank.transfer.create([
         starkbank.Transfer(
             amount=amount,
