@@ -11,8 +11,8 @@ def main():
         invoices.create_invoices()
         webhook.url_webhooks()
         webhook.webhooks()
-        time.sleep(10800)   #each loop runs only every 3 hours
         timing -= 1 #one is out at each loop, so the loops don't run forever
+        time.sleep(10800)   #each loop runs only every 3 hours
 
 
 if __name__ == '__main__':
