@@ -1,7 +1,7 @@
 import starkbank
 import keys
-from names import random_names
-from cpf import random_cpf
+import names    #package names installed from pip
+from cpf_generator import CPF   #package cpf-generator installed from pip
 from random import randint
 
 def create_invoices():
@@ -9,8 +9,8 @@ def create_invoices():
         invoices = starkbank.invoice.create([
             starkbank.Invoice(
                 amount=randint(1, 5000),
-                name=random_names(),
-                tax_id=random_cpf()
+                name=names.get_full_name(),
+                tax_id=CPF.generate()
             )
         ])
 
