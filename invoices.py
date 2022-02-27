@@ -9,8 +9,8 @@ def create_invoices():
         invoices = starkbank.invoice.create([
             starkbank.Invoice(
                 amount=randint(1, 5000),
-                name=names.get_full_name(),
-                tax_id=CPF.generate()
+                name=names.get_full_name(),     #generate a random full name
+                tax_id=CPF.generate()           #generate a random brazilian cpf
             )
         ])
 
