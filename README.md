@@ -1,7 +1,7 @@
-# StarkBank_Project
+# StarkBank_Test
 Start with the main.py =)
 
-# The Challenge
+# The Test
 1. Issues 8 to 12 Invoices every 3 hours to random people for 24 hours (our Sandbox
 emulation environment will make sure some of those are automatically paid);
 
