@@ -4,7 +4,7 @@ import transference
 
 def url_webhooks(): 
     webhook = starkbank.webhook.create(     #receiving the webhook events through the link below
-        url="url",
+        url="insert your url here",
         subscriptions=[
             "invoice"
         ]
