@@ -5,11 +5,9 @@ def first_validation():     #this function makes the first question showed and i
         first_question = input("Do you want to fully see an Event's info? [Y/n]: ")
         if first_question in ["y", "Y"]:       
             events_validation()
-            
         elif first_question in ["n", "N"]:     
             print("The program is being closed...")
             exit()
-
         else:
             print("Invalid character")
             second_validation()      
@@ -21,11 +19,9 @@ def events_validation():     #this function makes the event's ID question and it
     if (len(event_id)) == 16:   #all the event's id have the same amount of numbers: 16, so this line makes sure the default is followed
         print("----SEARCHING THE EVENT, JUST WAIT...----")
         print(starkbank.event.get(event_id))    #it gets the event from the query and prints it
-
     elif event_id in ["exit", "EXIT"]:
         print("The program is being closed...")
-        exit()
-    
+        exit() 
     else:
         print("Invalid Event's ID")
         events_validation()  #if the input is invalid, return to the beginning of this function
