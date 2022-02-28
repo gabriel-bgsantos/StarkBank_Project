@@ -16,17 +16,11 @@ def first_validation():     #this function makes the first question showed and i
 
 def events_validation():     #this function makes the event's ID question and its validations, if typed correctly it shows all the info of the event's id
     event_id = input("Insert the Event's ID [EXIT to cancel]: ")
+    
+    #the if below need a fix once it just works when typed a valid event's id on the query
     if (len(event_id)) == 16:   #all the event's id have the same amount of numbers: 16, so this line makes sure the default is followed
         print("----SEARCHING THE EVENT, JUST WAIT...----")
         print(starkbank.event.get(event_id))    #it gets the event from the query and prints it
-        
-        ''' #tried this fix first, somehow it's just working inverted
-        if event_id in starkbank.event.query():
-            print(starkbank.event.get(event_id)) 
-        else:
-            print("Could not find this ID on the query")
-            events_validation()
-        '''
 
     elif event_id in ["exit", "EXIT"]:
         print("The program is being closed...")
