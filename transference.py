@@ -13,9 +13,3 @@ def get_that_money(amount):
             account_type="payment"
         )
     ])
-
-    for transfer in transfers:        
-        if "created" in transfer.status:
-            print("\nThe following transfer was created:\n", transfer)
-        else:
-            print ("There was an error, the transfer couldn't be created...")
