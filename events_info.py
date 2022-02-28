@@ -27,7 +27,7 @@ def events_validation():     #this function makes the event's ID question and it
         events_validation()  #if the input is invalid, return to the beginning of this function
     
 def second_validation():    #this one just make sure if you really want to continue or not
-    second_question = input("Do you want to continue?: [Y/n] ")
+    second_question = input("Do you want to continue? [Y/n]: ")
     if second_question in ["y", "Y"]:
         return
     elif second_question in ["n", "N"]:
