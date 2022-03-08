@@ -11,7 +11,7 @@ def main():
         keys.authenticator()
         invoices.create_invoices()
         
-        #the if below prevents the asking of new Webhook URLs when in another loop (which throws the "URL is already being used" error)
+        #the if below prevents the asking of new Webhook URLs after the first loop (which throws the "URL is already being used" error)
         if timing == 8:
             webhook.url_webhooks()
         else:
