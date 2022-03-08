@@ -15,4 +15,4 @@ def create_invoices():
         ])
 
         for invoice in invoices:
-            print(invoice)
+            print("Invoice Created! ID:", invoice.id)
