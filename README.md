@@ -1,4 +1,4 @@
-# StarkBank_Test
+# StarkBank-test
 Start with the main.py =)
 
 # The Test
