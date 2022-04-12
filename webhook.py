@@ -31,7 +31,7 @@ def webhooks():
     for event in events:
         
         if event.log.type == "credited":    #if the event has the "credited" type status, request a Transfer and store the Event's ID
-            file = open("./StarkBank_Test/credited_list.txt", "r+")  #open the file used to store Events' IDs, then read it and goes to the file's last line (r+)
+            file = open("./starkBank-test/credited_list.txt", "r+")  #open the file used to store Events' IDs, then read it and goes to the file's last line (r+)
             
             if str(event.id) not in file.read():    #if the ID isn't on the file list, request the transfer and store the current Event's ID
                 transference.get_that_money(event.log.invoice.amount)
